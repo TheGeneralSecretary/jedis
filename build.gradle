@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.thegeneralsecretary'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+	implementation('io.github.cdimascio:java-dotenv:5.2.2')
+	implementation(group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.6')
+	implementation(group: 'commons-cli', name: 'commons-cli', version: '1.5.0')
+}
+
+test {
+    useJUnitPlatform()
+}
